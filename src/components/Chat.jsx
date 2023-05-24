@@ -15,6 +15,7 @@ function Chat() {
   const { userPhone, setDataMessage, dataMessage } = useContext(UserContext);
   const [message, setMessage] = useState('');
   const [notify, setNotify] = useState('');
+  const [newMessage, setNewMessage] = useState(null);
 
   // Отправка сообщения
   const sendMessage = async () => {
@@ -45,9 +46,9 @@ function Chat() {
 
   // Обновление в режиме реального времени - объединение в пул (pooling)
   const realTimeNotify = async () => {
-    const resultTimer = await getMessageRealTime(dataMessage);
-    if (Array.isArray(resultTimer)) {
-      setDataMessage(resultTimer);
+    const resultTimer = await getMessageRealTime();
+    if (resultTimer.textMessage) {
+      setNewMessage(resultTimer);
       setNotify('У вас новое сообщение');
       return;
     }
@@ -57,7 +58,7 @@ function Chat() {
   useEffect(() => {
     const timer = setInterval(() => {
       realTimeNotify();
-    }, 3000);
+    }, 2000);
 
     return () => clearInterval(timer);
   }, [notify]);
@@ -69,7 +70,7 @@ function Chat() {
       ) : (
         <div className='chat'>
           <HeaderChat userPhone={userPhone} />
-          <MainChatList />
+          <MainChatList newMessage={newMessage} dataMessage={dataMessage} />
 
           <footer className='footer'>
             <div className='footer__emoji'>

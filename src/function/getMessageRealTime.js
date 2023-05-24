@@ -1,6 +1,6 @@
 import { getNotification, deleteNotification } from '../api/greenApi';
 
-export const getMessageRealTime = async (dataMessage) => {
+export const getMessageRealTime = async () => {
   const idInstance = sessionStorage.getItem('idInstance');
   const apiToken = sessionStorage.getItem('apiToken');
   const data = await getNotification(idInstance, apiToken);
@@ -20,16 +20,20 @@ export const getMessageRealTime = async (dataMessage) => {
     return 'Сообщений не было';
   }
 
+  if (typeMessage === 'imageMessage') {
+    await deleteNotification(idInstance, apiToken, idMessage);
+    return 'Сообщений не было';
+  }
+
   if (typeMessage === 'textMessage') {
     const textMessage = data.body.messageData.textMessageData.textMessage;
     const timeMessage = new Date();
-    const newDataMsg = [...dataMessage, {
+    const newDataMsg = {
       textMessage,
       id: timeMessage.getMilliseconds(),
       name: 'left',
       time: `${timeMessage.getHours()}:${timeMessage.getMinutes()}`,
-    },
-    ];
+    };
 
     await deleteNotification(idInstance, apiToken, idMessage);
     return newDataMsg;

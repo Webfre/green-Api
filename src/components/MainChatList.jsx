@@ -1,10 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../pages/Home';
 import { BsCheck2All } from 'react-icons/bs';
 import { HiOutlineLockClosed } from 'react-icons/hi';
 
-function MainChatList() {
-  const { dataMessage } = useContext(UserContext);
+function MainChatList({ newMessage, dataMessage }) {
+  const { setDataMessage } = useContext(UserContext);
+
+  useEffect(() => {
+    if (newMessage === null) return;
+    setDataMessage([...dataMessage, newMessage]);
+  }, [newMessage]);
 
   return (
     <main className='main'>
