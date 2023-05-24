@@ -1,6 +1,6 @@
 # GREEN API
 
-![Image alt](https://github.com/Webfre/realtime-chat/blob/main/src/images/photo_2023-04-07_10-17-10.jpg)
+![Image alt](https://github.com/Webfre/green-Api/blob/main/src/assets/2023-05-24_16-54-26.png)
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=webfre&label=Profile%20views&color=0e75b6&style=flat" alt="webfre" /> </p>
 
