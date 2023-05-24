@@ -32,7 +32,7 @@
 Для того, чтобы установить проект локально, Вам потребуется:
 
 ```sh
-git clone https://github.com/Webfre/green-Api.git
+git clone https://github.com/Webfre/green-api.git
 ```
 
 Запуск проекта:
