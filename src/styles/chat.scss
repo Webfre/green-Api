@@ -1,0 +1,219 @@
+@import '../styles/variables';
+
+.chat {
+  /* HEADER STYLE */
+  .header {
+    padding: 25px;
+    border-bottom: 1px solid rgba(190, 188, 188, 0.517);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $text-black;
+    user-select: none;
+
+    .header__profile {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease-out;
+      scale: 1;
+
+      svg {
+        font-size: 48px;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+          font-size: 16px;
+        }
+
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .header__phone-call {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+
+      div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &::after {
+          content: '';
+          width: 1px;
+          background-color: $text-black;
+          height: 25px;
+        }
+      }
+
+      svg {
+        cursor: pointer;
+        padding: 10px;
+        background-color: transparent;
+        font-size: 20px;
+        color: $text-black;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: $button-tr;
+        }
+      }
+    }
+  }
+
+  /* MAIN STYLE */
+  .main {
+    min-height: calc(100vh - 208px);
+    padding: 25px;
+    background-image: url('../assets/bg-1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .list__message {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      .intro-message {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .position {
+        display: flex;
+        align-items: center;
+
+        li {
+          display: flex;
+          flex-direction: column;
+          background-color: $background-white;
+          padding: 10px;
+          border-radius: 6px;
+          gap: 5px;
+          cursor: text;
+
+          h5 {
+            font-size: 15px;
+            font-weight: 500;
+            color: $text-grey;
+          }
+
+          span {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            gap: 4px;
+            font-size: 12px;
+
+            svg {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      .position.right {
+        justify-content: end;
+
+        li {
+          background-color: $message-color;
+        }
+      }
+
+      .position.left {
+        justify-content: start;
+      }
+    }
+  }
+
+  /* FOOTER STYLE */
+  .footer {
+    padding: 10px 10px 10px 25px;
+    background-color: rgb(255, 254, 254);
+    display: grid;
+    grid-template-columns: 20% 70% 10%;
+    border-top: 1px solid rgba(190, 188, 188, 0.517);
+
+    .footer__emoji {
+      display: flex;
+      gap: 20px;
+
+      svg {
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 4px;
+        background-color: transparent;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $button-tr;
+        }
+      }
+    }
+
+    .footer__form-message {
+      input {
+        outline: transparent;
+        border: none;
+        padding: 10px;
+        font-size: 14px;
+        width: 100%;
+      }
+    }
+
+    .footer__voice {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+
+      svg {
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 4px;
+        background-color: transparent;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $button-tr;
+        }
+      }
+    }
+
+    @media screen and (min-width: 1400px) {
+      grid-template-columns: 10% 80% 10%;
+    }
+
+    @media screen and (max-width: 1400px) {
+      grid-template-columns: 15% 75% 10%;
+    }
+
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: 17% 73% 10%;
+
+      .footer__emoji {
+        gap: 5px;
+
+        svg {
+          font-size: 16px;
+        }
+      }
+
+      .footer__voice {
+        svg {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

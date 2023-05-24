@@ -1,0 +1,160 @@
+@import '../styles/variables';
+
+.auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $background-dark;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: $background-white;
+    border-radius: 14px;
+    padding: 45px 45px 25px 45px;
+
+    h1 {
+      text-align: center;
+      font-size: 34px;
+      color: $text-green;
+      user-select: none;
+    }
+
+    .auth__input {
+      position: relative;
+      width: 100%;
+
+      input {
+        font-size: 22px;
+        border: none;
+        width: 89%;
+        background-color: $input-color;
+        border-radius: 14px;
+        padding: 12px 35px 12px 12px;
+        outline: transparent;
+        transition: outline 0.2s linear;
+
+        &:hover {
+          outline: 1px solid #00a884;
+          color: $text-black;
+        }
+
+        &:focus {
+          outline: 2px solid #00a884;
+          color: $text-black;
+        }
+      }
+    }
+
+    .auth__submit {
+      position: relative;
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        width: 100%;
+        padding: 12px;
+        outline: none;
+        border-radius: 14px;
+        border: none;
+        color: $text-white;
+        background-color: $text-green;
+        margin-top: 10px;
+        font-size: 22px;
+        cursor: pointer;
+        user-select: none;
+        scale: 1;
+        transition: all 0.25s ease-in-out;
+
+        &:hover {
+          scale: 0.98;
+          gap: 11px;
+          background-color: $background-green;
+        }
+      }
+
+      .auth__error-message {
+        left: 10px;
+        position: absolute;
+        font-size: 16px;
+        font-weight: 600;
+        bottom: -25px;
+        color: $text-error;
+      }
+    }
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  color: $input-reset-text;
+  transform: translateX(-35px);
+  animation: myAnim 0.5s ease-in 0s 1 normal forwards;
+  transition: color 0.2s ease-in-out;
+  opacity: 0;
+
+  &:hover {
+    color: $background-green;
+  }
+
+  @keyframes myAnim {
+    0% {
+      transform: translateX(-25px);
+      opacity: 0.3;
+    }
+    50% {
+      transform: translateX(-30px);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateX(-35px);
+      opacity: 1;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.auth__redirect-green-api {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: $text-grey-tr;
+  margin-top: 25px;
+  user-select: none;
+
+  a {
+    display: inline-block;
+    line-height: 1;
+    color: $text-green;
+    font-weight: 600;
+    text-decoration: none;
+
+    &::after {
+      display: block;
+      content: '';
+      height: 3px;
+      width: 0%;
+      background-color: $background-green;
+      transition: width 0.4s ease-in-out;
+    }
+
+    &:hover:after,
+    &:focus:after {
+      width: 100%;
+    }
+
+    &:hover {
+      color: #044a3b;
+    }
+  }
+}

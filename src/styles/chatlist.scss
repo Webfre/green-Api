@@ -1,0 +1,237 @@
+@import '../styles/variables';
+
+.chatlist {
+  padding: 25px 25px 0 25px;
+  border-right: 1px solid rgba(190, 188, 188, 0.517);
+
+  .chatlist__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .chatlist__info-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+
+      h1 {
+        color: $text-black;
+        user-select: none;
+      }
+
+      .configuration {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        button {
+          background: transparent;
+          border: none;
+          padding: 10px;
+          cursor: pointer;
+          border-radius: 5px;
+
+          svg {
+            font-size: 18px;
+          }
+
+          &:hover {
+            background-color: $button-tr;
+          }
+        }
+      }
+    }
+
+    .chatlist__info-bottom {
+      display: flex;
+      position: relative;
+
+      input {
+        width: 100%;
+        padding: 12px 28px 12px 12px;
+        border: 1px solid $input-search;
+        border-radius: 6px;
+        outline: transparent;
+        transition: outline 0.2s linear;
+        font-size: 16px;
+
+        &:hover {
+          outline: 1px solid #00a884;
+          color: $text-black;
+        }
+
+        &:focus {
+          outline: 1px solid #00a884;
+          color: $text-black;
+        }
+      }
+
+      small {
+        position: absolute;
+        bottom: -22px;
+        left: 5px;
+        color: $text-error;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      button {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: $button-tr;
+        }
+
+        svg {
+          font-size: 14px;
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        input {
+          font-size: 14px;
+        }
+
+        button {
+          padding: 6px;
+          top: 7px;
+
+          svg {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .chatlist__contacts {
+    margin-top: 40px;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      li {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+        user-select: none;
+        background-color: transparent;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          background-color: $button-tr-min;
+        }
+
+        /* ACTIVE */
+        // background-color: $button-tr;
+
+        .avatar {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 15px;
+          color: $text-black;
+
+          .avatar-icon {
+            font-size: 60px;
+          }
+
+          .avatar__info {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+
+            h2 {
+              font-size: 16px;
+            }
+
+            .prev-message {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 5px;
+
+              .check-icon {
+                font-size: 22px;
+                color: $message-check;
+              }
+            }
+          }
+
+          // @media screen and (max-width: 1400px) {
+          //   gap: 5px;
+
+          //   .avatar-icon {
+          //     font-size: 35px;
+          //   }
+
+          //   .avatar__info {
+          //     h2 {
+          //       font-size: 14px;
+          //     }
+
+          //     .prev-message {
+          //       gap: 2px;
+          //       font-size: 14px;
+
+          //       .check-icon {
+          //         font-size: 16px;
+          //       }
+          //     }
+          //   }
+          // }
+
+          @media screen and (max-width: 1024px) {
+            gap: 5px;
+
+            .avatar-icon {
+              font-size: 35px;
+            }
+
+            .avatar__info {
+              h2 {
+                font-size: 14px;
+              }
+
+              .prev-message {
+                gap: 2px;
+                font-size: 14px;
+
+                .check-icon {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+        }
+
+        .time {
+          font-size: 14px;
+          position: absolute;
+          right: 15px;
+          top: 18px;
+
+          @media screen and (max-width: 1024px) {
+            font-size: 12px;
+            top: 12px;
+          }
+        }
+      }
+    }
+  }
+}

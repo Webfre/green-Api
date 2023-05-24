@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# GREEN API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Image alt](https://github.com/Webfre/realtime-chat/blob/main/src/images/photo_2023-04-07_10-17-10.jpg)
 
-## Available Scripts
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=webfre&label=Profile%20views&color=0e75b6&style=flat" alt="webfre" /> </p>
 
-In the project directory, you can run:
+## Предварительный просмотр
 
-### `npm start`
+<a href="https://webfre.github.io/realtime-chat/" target="_blank">Перейти 👁</a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Технологии
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Использовались библиотеки с открытым исходным кодом, такие как:
 
-### `npm test`
+## Зависимости (Dependencies):
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [react](https://reactjs.org/) - это библиотека JavaScript с открытым исходным кодом для создания внешних пользовательских интерфейсов.
+- [react-icons](https://react-icons.github.io/react-icons/) - это небольшая библиотека, которая помогает добавлять иконки (из разных библиотек иконок) в ваши приложения React.
+- [react-toastify](https://www.npmjs.com/package/react-toastify) - React -Toastify позволяет с легкостью добавлять уведомления в ваше приложение.
+- [react-router-dom](https://www.npmjs.com/package/react-router-dom) - пакет содержит привязки для использования маршрутизатора React в веб-приложениях.
+- [sass](https://sass-lang.com/) - это скриптовый метаязык (т.е. язык, описывающий другой язык), разработанный для упрощения файлов CSS.
+- [axios](https://axios-http.com/docs/intro) - это широко известная JavaScript-библиотека. Она представляет собой HTTP-клиент, основанный на промисах и предназначенный для браузеров и для Node.js.
+- [ESlint](https://github.com/eslint/eslint) - это инструмент, который помогает вам анализировать код JavaScript, находить синтаксические ошибки и автоматически исправлять их, писать аккуратный код в едином стиле в соответствии с определенными правилами.
+- [Prettier](https://prettier.io/) - это инструмент форматирования кода, предназначенный для использования жестко закодированных правил при разработке программ. Он автоматически форматирует код.
 
-### `npm run build`
+## Установка
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Приложение требует [Node.js](https://nodejs.org/) v16+ для запуска.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Если вы не знаете свою версию, вы можете проверить ее с помощью команды в терминале node -v.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Для того, чтобы установить проект локально, Вам потребуется:
 
-### `npm run eject`
+```sh
+git clone https://github.com/Webfre/realtime-chat.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Запуск проекта:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```sh
+cd green-api
+npm install
+npm start
+```
