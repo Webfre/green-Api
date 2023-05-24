@@ -6,7 +6,7 @@
 
 ## Предварительный просмотр
 
-<a href="https://webfre.github.io/realtime-chat/" target="_blank">Перейти 👁</a>
+<a href="https://webfre.github.io/green-api/" target="_blank">Перейти 👁</a>
 
 ## Технологии
 
@@ -32,7 +32,7 @@
 Для того, чтобы установить проект локально, Вам потребуется:
 
 ```sh
-git clone https://github.com/Webfre/realtime-chat.git
+git clone https://github.com/Webfre/green-Api.git
 ```
 
 Запуск проекта:
