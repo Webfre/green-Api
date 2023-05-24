@@ -12,7 +12,7 @@ function App() {
       const idInstance = sessionStorage.getItem('idInstance');
       const apiToken = sessionStorage.getItem('apiToken');
 
-      idInstance && apiToken ? navigate('/') : navigate('auth');
+      idInstance && apiToken ? navigate('/') : navigate('/auth');
     } else {
       navigate('/auth');
     }
